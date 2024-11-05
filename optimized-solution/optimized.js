@@ -11,7 +11,7 @@ const { Worker } = require('worker_threads');
 
 function createWorker() {
 	return new Promise((resolve, reject) => {
-		const worker = new Worker('./optimized-solution/three-workers.js', {
+		const worker = new Worker('./optimized-solution/two-workers.js', {
 			workerData: { thread_count: THREAD_COUNT },
 		});
 		worker.on('message', (data) => {
